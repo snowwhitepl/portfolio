@@ -1,4 +1,4 @@
-<style> 
+<style>
 body { 
     background-color: #fff; 
     font-family: Verdana, sans-serif; 
@@ -14,9 +14,9 @@ body {
  
 .pack, .fashion {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 140px);
     justify-content: center;
-    gap: 10px 10px;
+    gap: 10px;
     margin-bottom: 30px;
 }
 
@@ -48,7 +48,6 @@ body {
 }
 
 .pack img:hover {
-    transform: scale(1.05);
     border-color: #a86d11;
 }
 
@@ -94,6 +93,34 @@ a {
 
 a:hover { 
     cursor: move; 
-} 
-</style>
+}
 
+@media (max-width: 768px) {
+  .pack, .fashion {
+    grid-template-columns: repeat(2, 140px);
+    justify-content: center;
+  }
+
+  .pack img,
+  .fashion img {
+    width: 140px;
+    height: 200px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 70%;
+  }
+
+  .close {
+    font-size: 32px;
+    top: 15px;
+    right: 20px;
+  }
+}
+</style>
