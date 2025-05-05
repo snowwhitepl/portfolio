@@ -1,26 +1,28 @@
-<style>
-body { 
-    background-color: #fff; 
-    font-family: Verdana, sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    color: #000; 
-} 
-
-.container { 
-    text-align: center; 
+body {
+    background-color: #fff;
     font-family: Verdana, sans-serif;
-} 
- 
-.pack, .fashion {
+    margin: 10px auto; /* góra/dół 10px, lewo/prawo auto */
+    padding: 0;
+    color: #000;
+    max-width: 800px; /* ograniczenie szerokości */
+    border: 15px solid #000;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    padding: 2px;
+    text-align: center;
+  }
+  
+  .pack, .fashion {
     display: grid;
     grid-template-columns: repeat(5, 140px);
     justify-content: center;
     gap: 10px;
     margin-bottom: 30px;
-}
-
-.pack img {
+  }
+  
+  .pack img {
     width: 140px;
     height: 200px;
     cursor: move;
@@ -28,30 +30,30 @@ body {
     border: 2px solid #373535;
     border-radius: 8px;
     transition: 0.3s ease, border-color 0.3s ease;
-}
-
-.fashion img {
+  }
+  
+  .fashion img {
     width: 140px;
     height: 200px;
     cursor: move;
     object-fit: cover;
-}
-
-.pack img,
-.fashion img {
+  }
+  
+  .pack img,
+  .fashion img {
     transition: transform 0.3s ease;
-}
-
-.pack img:hover,
-.fashion img:hover {
+  }
+  
+  .pack img:hover,
+  .fashion img:hover {
     transform: scale(1.05);
-}
-
-.pack img:hover {
+  }
+  
+  .pack img:hover {
     border-color: #a86d11;
-}
-
-.lightbox {
+  }
+  
+  .lightbox {
     display: none;
     position: fixed;
     top: 0; left: 0;
@@ -60,67 +62,77 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-}
+  }
   
-.lightbox-img {
+  .lightbox-img {
     max-width: 90%;
     max-height: 80%;
     box-shadow: 0 0 20px #fff;
-}
+  }
   
-.close {
+  .close {
     position: absolute;
     top: 20px;
     right: 30px;
     font-size: 40px;
     color: white;
     cursor: pointer;
-}
-
-p { 
-    max-width: 700px; 
-    margin: 20px auto; 
-    padding: 10px; 
-    border: 2px dotted #000; 
-    font-size: 12px; 
-    text-align: justify; 
-} 
-
-a { 
-    text-decoration: none; 
-    color: #000; 
-} 
-
-a:hover { 
-    cursor: move; 
-}
-
-@media (max-width: 768px) {
-  .pack, .fashion {
-    grid-template-columns: repeat(2, 140px);
-    justify-content: center;
   }
-
-  .pack img,
-  .fashion img {
-    width: 140px;
-    height: 200px;
-  }
-
+  
   p {
-    font-size: 14px;
-    padding: 5px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 12px;
+    text-align: justify;
   }
-
-  .lightbox-img {
-    max-width: 95%;
-    max-height: 70%;
+  
+  .notice {
+    border: 2px dotted #000;
   }
-
-  .close {
-    font-size: 32px;
-    top: 15px;
-    right: 20px;
+  
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    margin: 30px 0 10px;
   }
-}
-</style>
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a:hover {
+    cursor: move;
+  }
+  
+  @media (max-width: 768px) {
+    .pack, .fashion {
+      grid-template-columns: repeat(2, 140px);
+      justify-content: center;
+    }
+  
+    .pack img,
+    .fashion img {
+      width: 140px;
+      height: 200px;
+    }
+  
+    p {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    .lightbox-img {
+      max-width: 95%;
+      max-height: 70%;
+    }
+  
+    .close {
+      font-size: 32px;
+      top: 15px;
+      right: 20px;
+    }
+  }
