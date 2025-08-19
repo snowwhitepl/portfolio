@@ -1,138 +1,148 @@
 body {
-    background-color: #fff;
-    font-family: Verdana, sans-serif;
-    margin: 10px auto; /* góra/dół 10px, lewo/prawo auto */
-    padding: 0;
-    color: #000;
-    max-width: 800px; /* ograniczenie szerokości */
-    border: 15px solid #000;
-    box-sizing: border-box;
+  background-color: #fff;
+  font-family: Verdana, sans-serif;
+  margin: 10px auto;
+  padding: 0;
+  color: #000;
+  max-width: 800px;
+  border: 15px solid #000;
+  box-sizing: border-box;
   }
   
+  /* równe odstępy po bokach */
   .container {
-    padding: 2px;
-    text-align: center;
+  padding: 2px 15px; /* góra-dół 2px, boki 15px */
+  text-align: center;
   }
   
-  .pack, .fashion {
-    display: grid;
-    grid-template-columns: repeat(5, 140px);
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+  /* SIATKA – elastyczna, równa po bokach */
+  .pack, .fashion, .social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
   }
   
-  .pack img {
-    width: 140px;
-    height: 200px;
-    cursor: move;
-    object-fit: cover;
-    border: 2px solid #373535;
-    border-radius: 8px;
-    transition: 0.3s ease, border-color 0.3s ease;
+  /* MINIATURY – cz/b domyślnie, kolor na hover; proporcje 140x200 */
+  .pack img, .fashion img, .social img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 10 / 14; /* odpowiada 140x200 */
+  cursor: move;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease;
+  filter: grayscale(100%);
   }
   
-  .fashion img {
-    width: 140px;
-    height: 200px;
-    cursor: move;
-    object-fit: cover;
+  /* ramka i zaokrąglenie – jak w .pack – także dla .social (fashion bez ramek) */
+  .pack img, .social img {
+  border: 2px solid #373535;
+  border-radius: 8px;
   }
   
-  .pack img,
-  .fashion img {
-    transition: transform 0.3s ease;
+  .pack img:hover, .fashion img:hover, .social img:hover {
+  transform: scale(1.05);
+  filter: none; /* powrót koloru */
   }
   
-  .pack img:hover,
-  .fashion img:hover {
-    transform: scale(1.05);
-  }
+  /* brak beżowej zmiany koloru – spójnie */
+  .pack img:hover { border-color: #373535; }
   
-  .pack img:hover {
-    border-color: #a86d11;
-  }
-  
+  /* LIGHTBOX */
   .lightbox {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  display: none;
+  position: fixed;
+  inset: 0; /* top/right/bottom/left: 0 */
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
   }
   
-  .lightbox-img {
-    max-width: 90%;
-    max-height: 80%;
-    box-shadow: 0 0 20px #fff;
+  /* obraz i video w lightboxie – nigdy nieprzycięte */
+  .lightbox-img,
+  .lightbox-video {
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 85vh;
+  object-fit: contain; /* klucz: bez ucinania */
+  box-shadow: 0 0 20px #fff;
+  background: #000;
+  }
+  
+  /* wrapper na video (dla przycisku full screen) */
+  .video-wrap {
+  display: none;
+  position: relative;
+  max-width: 95vw;
+  max-height: 85vh;
+  }
+  
+  .lightbox-video { display: block; }
+  
+  .fs-btn {
+  position: absolute;
+  right: 0;
+  bottom: -42px;
+  padding: 6px 10px;
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
   }
   
   .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
   }
   
   p {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 12px;
-    text-align: justify;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 12px;
+  text-align: justify;
   }
   
-  .notice {
-    border: 2px dotted #000;
-  }
+  .notice { border: 2px dotted #000; }
   
   h2 {
-    font-weight: bold;
-    text-align: center;
-    border: none;
-    font-size: 16px;
-    margin: 30px 0 10px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  margin: 30px 0 10px;
   }
   
-  a {
-    text-decoration: none;
-    color: #000;
-  }
+  a { text-decoration: none; color: #000; }
+  a:hover { cursor: move; }
   
-  a:hover {
-    cursor: move;
-  }
-  
+  /* RESPONSYWNOŚĆ */
   @media (max-width: 768px) {
-    .pack, .fashion {
-      grid-template-columns: repeat(2, 140px);
-      justify-content: center;
-    }
-  
-    .pack img,
-    .fashion img {
-      width: 140px;
-      height: 200px;
-    }
-  
-    p {
-      font-size: 14px;
-      padding: 5px;
-    }
-  
-    .lightbox-img {
-      max-width: 95%;
-      max-height: 70%;
-    }
-  
-    .close {
-      font-size: 32px;
-      top: 15px;
-      right: 20px;
-    }
+  p { font-size: 14px; padding: 5px; }
+  .lightbox-img, .lightbox-video {
+  max-width: 95vw;
+  max-height: 70vh;
   }
+  .close { font-size: 32px; top: 15px; right: 20px; }
+  .fs-btn { bottom: -38px; }
+  }
+  
+  @media (max-width: 480px) {
+  body { border-width: 8px; }
+  .pack, .fashion, .social { gap: 8px; }
+  .close { font-size: 28px; right: 14px; top: 10px; }
+  .fs-btn { bottom: -34px; }
+  .lightbox-img, .lightbox-video { max-width: 96vw; max-height: 70vh; }
+  }
+  
+  /* lepsze tapowanie na iOS */
+  * { -webkit-tap-highlight-color: transparent; }
