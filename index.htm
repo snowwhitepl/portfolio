@@ -1,102 +1,77 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Aneta Iwona Lewandowska">
-<meta name="description" content="Portfolio Anety Iwony Lewandowskiej">
-<meta name="robots" content="noindex, nofollow">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>____ anetaiwona.com portfolio.</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Aneta Iwona Lewandowska" />
+<meta name="description" content="Visual & Front-End Designer: UX/UI, social media, publishing, posters, industrial design. Portfolio Anety Iwony Lewandowskiej." />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- 1) CZCIONKA PLAYFAIR DISPLAY -->
+<title>____ anetaiwona.com | Portfolio</title>
+
+<!-- Open Graph (ładne udostępnianie na socialach) -->
+<meta property="og:title" content="Aneta Iwona Lewandowska — Visual & Front-End Designer" />
+<meta property="og:description" content="Portfolio projektów: UX/UI, social media, grafika wydawnicza, plakaty, wzornictwo." />
+<meta property="og:image" content="https://anetaiwona.com/og-cover.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://anetaiwona.com/" />
+
+<!-- Favicony (wrzuć pliki do katalogu głównego) -->
+<link rel="icon" type="image/png" href="/favicon.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- 2) NAGŁÓWEK Z NAZWISKIEM I PIONOWĄ KRESKĄ -->
+<!-- 2) NAGŁÓWEK -->
 <header class="site-header">
 <h1 class="brand">aneta iwona lewandowska</h1>
-<div class="subtitle">portfolio</div>
+<div class="subtitle">visual & front-end designer</div>
 </header>
 
-<!-- 3) BIAŁY OBSZAR NA PRACE + PIONOWA LINIA 10px PO PRAWEJ -->
+<!-- 3) OBSZAR TREŚCI (BIAŁY) + CZARNY PASEK PO LEWEJ -->
 <main class="content-wrap">
 <div class="content">
 <div class="container">
 
-<p class="notice">Informuję, że nie jestem zainteresowana pracą na zasadach wolontariatu w żadnej formie. Podmioty podejmujące próby narzucenia mi pracy bez gwarancji zapłaty natychmiast zgłaszam do Inspekcji Pracy.</p>
+<p class="notice">
+Informuję, że nie jestem zainteresowana pracą na zasadach wolontariatu w żadnej formie.
+Podmioty podejmujące próby narzucenia mi pracy bez gwarancji zapłaty natychmiast zgłaszam do Inspekcji Pracy.
+</p>
 
+<!-- ===== KOLEJNOŚĆ DZIAŁÓW ===== -->
+
+<!-- rysunki żurnalowe (bez ramki/cienia + kursor move) -->
+<section class="section-plain">
 <h2>rysunki żurnalowe</h2>
-<div class="fashion">
-<img src="works/08.jpg" alt="powieksz" loading="lazy">
-<img src="works/18.jpg" alt="powieksz" loading="lazy">
-<img src="works/20.jpg" alt="powieksz" loading="lazy">
-<img src="works/24.jpg" alt="powieksz" loading="lazy">
-<img src="works/21.jpg" alt="powieksz" loading="lazy">
-<img src="works/13.jpg" alt="powieksz" loading="lazy">
-<img src="works/07.jpg" alt="powieksz" loading="lazy">
-<img src="works/17.jpg" alt="powieksz" loading="lazy">
-<img src="works/10.jpg" alt="powieksz" loading="lazy">
-<img src="works/14.jpg" alt="powieksz" loading="lazy">
-<img src="works/09.jpg" alt="powieksz" loading="lazy">
-<img src="works/05.jpg" alt="powieksz" loading="lazy">
-<img src="works/19.jpg" alt="powieksz" loading="lazy">
-<img src="works/02.jpg" alt="powieksz" loading="lazy">
-<img src="works/22.jpg" alt="powieksz" loading="lazy">
-</div>
+<article class="story" data-base="rysunki" data-count="5" data-lead="rysunki żurnalowe"></article>
+</section>
 
-<h2>ilustracje</h2>
-<div class="pack">
-<img src="works/i03.png" alt="powieksz" loading="lazy">
-<img src="works/i05.png" alt="powieksz" loading="lazy">
-<img src="works/i01.png" alt="powieksz" loading="lazy">
-<img src="works/i04.png" alt="powieksz" loading="lazy">
-<img src="works/i02.png" alt="powieksz" loading="lazy">
-<img src="nowe/01.png" alt="powieksz" loading="lazy">
-<img src="nowe/02.png" alt="powieksz" loading="lazy">
-<img src="nowe/03.png" alt="powieksz" loading="lazy">
-<img src="nowe/04.png" alt="powieksz" loading="lazy">
-<img src="nowe/05.png" alt="powieksz" loading="lazy">
-<img src="nowe/06.png" alt="powieksz" loading="lazy">
-<img src="nowe/07.png" alt="powieksz" loading="lazy">
-<img src="nowe/08.png" alt="powieksz" loading="lazy">
-<img src="nowe/09.png" alt="powieksz" loading="lazy">
-<img src="nowe/10.png" alt="powieksz" loading="lazy">
-<img src="works/26.jpg" alt="powieksz" loading="lazy">
-<img src="works/27.jpg" alt="powieksz" loading="lazy">
-<img src="works/28.jpg" alt="powieksz" loading="lazy">
-<img src="works/29.jpg" alt="powieksz" loading="lazy">
-<img src="works/30.jpg" alt="powieksz" loading="lazy">
-<img src="works/45.png" alt="powieksz" loading="lazy">
-<img src="works/41.png" alt="powieksz" loading="lazy">
-<img src="works/42.png" alt="powieksz" loading="lazy">
-<img src="works/43.png" alt="powieksz" loading="lazy">
-<img src="works/44.png" alt="powieksz" loading="lazy">
-</div>
+<!-- ux / ui (bez ramki/cienia + kursor move) -->
+<section class="section-plain">
+<h2>user experience / user interface design</h2>
+<article class="story" data-base="uxui" data-count="8" data-lead="ux / ui"></article>
+</section>
 
-<h2>wzornictwo przemysłowe</h2>
-<div class="fashion">
-<img src="works/m01.png" alt="powieksz" loading="lazy">
-<img src="works/m14.png" alt="powieksz" loading="lazy">
-<img src="works/m03.png" alt="powieksz" loading="lazy">
-<img src="works/m04.png" alt="powieksz" loading="lazy">
-<img src="works/m05.png" alt="powieksz" loading="lazy">
-<img src="works/m06.png" alt="powieksz" loading="lazy">
-<img src="works/m07.png" alt="powieksz" loading="lazy">
-<img src="works/m08.png" alt="powieksz" loading="lazy">
-<img src="works/m09.png" alt="powieksz" loading="lazy">
-<img src="works/m10.png" alt="powieksz" loading="lazy">
-<img src="works/m11.png" alt="powieksz" loading="lazy">
-<img src="works/m12.png" alt="powieksz" loading="lazy">
-<img src="works/m13.png" alt="powieksz" loading="lazy">
-<img src="works/m15.png" alt="powieksz" loading="lazy">
-<img src="works/m02.png" alt="powieksz" loading="lazy">
-</div>
+<!-- grafika wydawnicza (bez ramki/cienia + kursor move) -->
+<section class="section-plain">
+<h2>grafika wydawnicza</h2>
+<article class="story" data-base="wydawnicza" data-count="9" data-lead="grafika wydawnicza"></article>
+</section>
 
+<!-- plakaty / kolaże (bez ramki/cienia + kursor move) -->
+<section class="section-plain">
+<h2>plakaty / kolaże</h2>
+<article class="story" data-base="plakaty" data-count="12" data-lead="plakaty / kolaż"></article>
+</section>
+
+<!-- social media (BEZ zmian) -->
 <h2>social media</h2>
 <div class="social">
 <img src="sm/min01.png" alt="powieksz" data-video="sm/07.mp4" loading="lazy">
@@ -109,17 +84,24 @@
 <img src="sm/min08.png" alt="powieksz" data-video="sm/01.mp4" loading="lazy">
 <img src="sm/min09.png" alt="powieksz" data-video="sm/04.mp4" loading="lazy">
 <img src="sm/min10.png" alt="powieksz" data-video="sm/03.mp4" loading="lazy">
+<br><br>
 </div>
+
+<!-- wzornictwo przemysłowe (bez ramki/cienia + kursor move) -->
+<section class="section-plain">
+<h2>wzornictwo przemysłowe</h2>
+<article class="story" data-base="wzornictwo" data-count="5" data-lead="wzornictwo przemysłowe"></article>
+</section>
 
 </div>
 </div>
 </main>
 
+<!-- LIGHTBOX (dla sekcji Social Media – bez zmian) -->
 <div class="lightbox" id="lightbox">
 <span class="close" aria-label="Zamknij">&times;</span>
 
 <img class="lightbox-img" id="lightbox-img" src="" alt="Podgląd pracy">
-
 <div class="video-wrap">
 <video class="lightbox-video" id="lightbox-video" src="" controls playsinline>
 Twoja przeglądarka nie wspiera odtwarzania MP4.
@@ -130,11 +112,11 @@ Twoja przeglądarka nie wspiera odtwarzania MP4.
 </div>
 
 <script src="script.js"></script>
- 
+
 <div class="site-footer-wrap">
-    <footer class="site-footer">
-    <a href="https://anetaiwona.com">anetaiwona.com</a>
-    </footer>
-    </div>
+<footer class="site-footer">
+<a href="https://anetaiwona.com">anetaiwona.com</a>
+</footer>
+</div>
 </body>
 </html>
